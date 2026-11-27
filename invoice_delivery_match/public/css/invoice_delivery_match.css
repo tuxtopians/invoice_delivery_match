@@ -1,0 +1,213 @@
+/* Line up with .es-breadcrumbs__label (page title text), not the raw column edge.
+   .page-title is 15px; breadcrumb item adds ~2px before the label glyph. */
+.idm-page {
+	padding: 0.5rem var(--padding-md, 15px) 1.5rem 17px !important;
+	box-sizing: border-box;
+}
+
+.idm-page .idm-filters {
+	margin-bottom: 0.75rem;
+}
+
+.idm-page .idm-filters .form-layout,
+.idm-page .idm-filters .form-section,
+.idm-page .idm-filters .section-body,
+.idm-page .idm-filters .form-column {
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none;
+	background: transparent;
+	float: none !important;
+	width: 100% !important;
+	max-width: none !important;
+}
+
+.idm-page .idm-filters .form-column form {
+	display: grid !important;
+	/* Company wider; dates/status tighter — all on one row */
+	grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 0.95fr) minmax(0, 0.95fr) minmax(0, 1.05fr);
+	gap: 0.5rem 0.65rem;
+	align-items: end;
+}
+
+.idm-page .idm-filters .frappe-control,
+.idm-page .idm-filters .frappe-control.input-max-width {
+	margin-bottom: 0;
+	max-width: none !important;
+	width: 100% !important;
+	min-width: 0;
+}
+
+.idm-page .idm-filters .form-group,
+.idm-page .idm-filters .form-group.horizontal {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	margin-bottom: 0;
+	gap: 0.25rem;
+}
+
+.idm-page .idm-filters .form-group.horizontal .clearfix,
+.idm-page .idm-filters .clearfix {
+	float: none !important;
+	width: 100% !important;
+	margin: 0;
+	padding: 0;
+}
+
+.idm-page .idm-filters .control-label {
+	display: block;
+	float: none !important;
+	margin: 0;
+	padding: 0;
+	font-size: var(--text-sm, 13px);
+	line-height: 1.3;
+}
+
+.idm-page .idm-filters .control-input-wrapper {
+	margin-left: 0 !important;
+	width: 100% !important;
+	max-width: none !important;
+}
+
+.idm-page .idm-filters .control-input,
+.idm-page .idm-filters .control-input .form-control,
+.idm-page .idm-filters .control-input .link-field,
+.idm-page .idm-filters .control-input .awesomplete,
+.idm-page .idm-filters .control-input input,
+.idm-page .idm-filters .control-input select {
+	width: 100% !important;
+	max-width: none !important;
+}
+
+.idm-page .idm-empty {
+	padding: 1.25rem 0;
+	color: var(--text-muted);
+}
+
+.idm-page .idm-summary {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 0.75rem;
+	margin-bottom: 0.85rem;
+	align-items: center;
+}
+
+.idm-page .idm-summary-total {
+	margin-right: 0.25rem;
+}
+
+.idm-page .idm-badge {
+	padding: 0.2rem 0.55rem;
+	border-radius: var(--border-radius, 4px);
+	font-size: var(--text-sm, 13px);
+	line-height: 1.3;
+	background: var(--subtle-fg, var(--bg-light-gray));
+	white-space: nowrap;
+}
+
+.idm-page .idm-badge.idm-mismatch {
+	background: var(--bg-red);
+	color: var(--text-on-red, inherit);
+}
+
+.idm-page .idm-badge.idm-matched {
+	background: var(--bg-green);
+	color: var(--text-on-green, inherit);
+}
+
+.idm-page .idm-badge.idm-missing {
+	background: var(--bg-yellow);
+}
+
+.idm-page .idm-table-wrap {
+	overflow-x: auto;
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius, 4px);
+}
+
+.idm-page .idm-table {
+	margin-bottom: 0;
+	font-size: var(--text-sm, 13px);
+	min-width: 980px;
+}
+
+.idm-page .idm-table th,
+.idm-page .idm-table td {
+	vertical-align: middle;
+	padding: 0.55rem 0.65rem;
+}
+
+.idm-page .idm-table thead th {
+	white-space: nowrap;
+	background: var(--subtle-fg, var(--bg-color));
+	font-weight: 600;
+	border-bottom-width: 1px;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.idm-page .idm-col-date,
+.idm-page .idm-col-period,
+.idm-page .idm-col-status,
+.idm-page .idm-col-amount {
+	white-space: nowrap;
+}
+
+.idm-page .idm-col-period,
+.idm-page .idm-col-amount {
+	font-variant-numeric: tabular-nums;
+}
+
+.idm-page .idm-col-customer {
+	max-width: 12rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.idm-page .idm-status {
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.idm-page tr.idm-row-mismatch {
+	background: color-mix(in srgb, var(--bg-red) 18%, transparent);
+}
+
+.idm-page tr.idm-row-mismatch .idm-status {
+	color: var(--text-danger, #e24c4c);
+}
+
+.idm-page tr.idm-row-matched .idm-status {
+	color: var(--text-success, #16794c);
+}
+
+.idm-page tr.idm-row-missing .idm-status {
+	color: var(--text-warning, #b36b00);
+}
+
+.idm-page .idm-hint {
+	margin-top: 0.75rem;
+	font-size: var(--text-sm, 13px);
+	line-height: 1.45;
+}
+
+@media (max-width: 1199px) {
+	.idm-page .idm-filters .form-column form {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.idm-page .idm-filters .form-column form {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 575px) {
+	.idm-page .idm-filters .form-column form {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

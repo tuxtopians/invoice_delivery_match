@@ -1,0 +1,31 @@
+{
+ "content": null,
+ "creation": "2026-11-27 16:10:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-11-27 16:10:00.000000",
+ "modified_by": "Administrator",
+ "module": "Invoice Delivery Match",
+ "name": "invoice-delivery-period-reconciliation",
+ "owner": "Administrator",
+ "page_name": "invoice-delivery-period-reconciliation",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Auditor"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "title": "Invoice Delivery Period Reconciliation"
+}
